@@ -106,6 +106,8 @@ function exec(commandLine, args, options) {
         const toolPath = commandArgs[0];
         args = commandArgs.slice(1).concat(args || []);
         const runner = new tr.ToolRunner(toolPath, args, options);
+        console.log(args);
+        console.log(options);
         return runner.exec();
     });
 }
